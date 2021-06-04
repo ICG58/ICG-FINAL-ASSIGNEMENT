@@ -12,7 +12,7 @@
                     DISPLAY("You have selected Fringes, it costs NS100")
                    ELSE
                        DISPLAY("This Item doesn't exist!")
-                    ENDIF 
+                   ENDIF 
                 ENDIF 
            ENDIF 
        END
@@ -23,13 +23,13 @@
    PROMPT payment 
       GET payment
 
-              payment=INPUT("How do you want to pay?:Credit Card OR Cash")
+        payment=INPUT("How do you want to pay?:Credit Card OR Cash")
          IF payment= Credit card THEN 
-              DISPLAY("Enter your Credit card number")
-        ELSE
-             DISPLAY (Please feel free to reach our distributors Dischem Pharmacies Namibia and PnP Namibia stores")
+                DISPLAY("Enter your Credit card number")
+            ELSE
+               DISPLAY (Please feel free to reach our distributors Dischem Pharmacies Namibia and PnP Namibia stores")
          ENDIF
-      END
+  END
 
 START
 
@@ -37,22 +37,22 @@ START
 
               {      credit_card_number=1234
            GET Credit_Card_number, Amount
-       DISPLAY("Thanks, enter your Amount") 
-    GET Amount
-    IF Amount=INT(500) 
-          DISPLAY("You have bought Shampoo, enter your Home address") 
-       ELSE 
-          IF Amount=INT(700) THEN 
-                  DISPLAY("You have bought Bangs, enter your Home address") 
-           ELSE 
-             IF Amount=INT(500) THEN
-                  DISPLAY("You have bought Fringes")
-             ELSE  THEN 
-                    DISPLAY("Error")
+                      DISPLAY("Thanks, enter your Amount") 
+          GET Amount
+                IF Amount=INT(500) 
+                     DISPLAY("You have bought Shampoo, enter your Home address") 
+                      ELSE 
+                          IF Amount=INT(700) THEN 
+                             DISPLAY("You have bought Bangs, enter your Home address") 
+                               ELSE 
+                                  IF Amount=INT(500) THEN
+                                       DISPLAY("You have bought Fringes")
+                                         ELSE  THEN 
+                                             DISPLAY("Error")
 
-             ENDIF
-          ENDIF
-       ENDIF
+                                  ENDIF
+                           ENDIF
+                       ENDIF
              } 
 END
 
@@ -60,9 +60,8 @@ END
 START
 
     INPUT ("your Home address")
-         home( town, home_number, street_name) 
-       GET address 
-             DISPLAY ("Thanks for trusting us, your item will be delivered by tomorrow")
+           GET address  home ( town, home_number, street_name) 
+                  DISPLAY ("Thanks for trusting us, your item will be delivered by tomorrow")
 END
 
 
@@ -76,12 +75,12 @@ START
                   VAT = sellingPrice - costPrice
 
        IF sellingPrice <= costPrice THEN 
-            PRINT("Loss was made") 
-           ELSE 
-             IF sellingPrice => costPrice THEN
+              PRINT("Loss was made") 
+            ELSE 
+                 IF sellingPrice => costPrice THEN
                      PRINT("You gain VAT")
-             ENDIF
-       ENDIF
+            ENDIF
+      ENDIF
 END
 
 
@@ -95,16 +94,20 @@ END
 
 START
 
-         Prompt  (sellingPrice, cost_price,VAT READ sellingPrice = 500,costPrice = 300) 
+   Prompt  (sellingPrice, cost_price,VAT READ sellingPrice = 500,costPrice = 300) 
 
-       sellingPrice = 300+200 
-     IF sellingPrice <= 300 THEN PRINT("Loss was made") 
-           ELSE 
-              IF sellingPrice => 300 THEN
-                   PRINT("You gain N$200")
-     Financial return percentage = N$ 500 ÷ N$ 300 × 100 
-    ENDIF
-         DISPLAY financial PRINT ("percentage=166%") 
+     sellingPrice = 300+200 
+     
+        IF sellingPrice <= 300 THEN 
+            PRINT("Loss was made") 
+              ELSE 
+                  IF sellingPrice => 300 THEN
+                      PRINT("You gain N$200")
+                      
+                           Financial return percentage = N$ 500 ÷ N$ 300 × 100 
+                           DISPLAY financial PRINT ("percentage=166%")
+                 ENDIF
+         ENDIF         
 END
 
 
@@ -139,7 +142,7 @@ END
 
 START
 
-      GET ItemName=array(Shampoo, ),(Fringes),(Bangs)
+      GET ItemName (Shampoo,Fringes,Bangs)
            DOWHILE
 
                 IF products are >= 35 THEN
