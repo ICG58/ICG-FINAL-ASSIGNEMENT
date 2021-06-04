@@ -18,7 +18,7 @@
        END
 
 
-START
+ START
 
    PROMPT payment 
       GET payment
