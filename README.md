@@ -28,8 +28,8 @@
               DISPLAY("Enter your Credit card number")
         ELSE
              DISPLAY (Please feel free to reach our distributors Dischem Pharmacies Namibia and PnP Namibia stores")
-   ENDIF
-  END
+         ENDIF
+      END
 
 START
 
